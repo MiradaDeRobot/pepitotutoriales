@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorial Completo de Tinkercad 3D</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    .tab-active { border-bottom: 3px solid #0284c7; color: #0284c7; font-weight: 700; }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased min-h-screen flex flex-col">
+
+  <!-- Header / Navbar -->
+  <header class="bg-slate-800 border-b border-slate-700 sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="bg-sky-500 text-slate-900 font-black px-3 py-1 rounded text-xl tracking-wider">3D</div>
+        <h1 class="text-xl font-bold bg-gradient-to-r from-sky-400 to-cyan-300 bg-clip-text text-transparent">
+          Tinkercad Master Class
+        </h1>
+      </div>
+      <nav class="hidden md:flex gap-6 text-sm font-medium text-slate-300">
+        <a href="#interfaz" class="hover:text-sky-400 transition">Interfaz y Cámara</a>
+        <a href="#operaciones" class="hover:text-sky-400 transition">Operaciones Básicas</a>
+        <a href="#proyectos" class="hover:text-sky-400 transition">Proyectos Guiados</a>
+        <a href="#atajos" class="hover:text-sky-400 transition">Atajos de Teclado</a>
+      </nav>
+      <div class="flex items-center gap-2 bg-slate-900/60 px-3 py-1.5 rounded-full border border-slate-700 text-xs text-slate-400">
+        <i class="fa-solid fa-graduation-cap text-sky-400"></i>
+        <span>Guía de Estudio</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-b from-slate-800 to-slate-900 border-b border-slate-800 py-12 px-4">
+    <div class="max-w-4xl mx-auto text-center space-y-4">
+      <span class="bg-sky-500/10 text-sky-400 text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full border border-sky-500/30">
+        Manual Interactivo
+      </span>
+      <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+        Aprende Diseño 3D en Tinkercad de Cero a Pro
+      </h2>
+      <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">
+        Domina el plano de trabajo, la manipulación de formas primarias, alineación, agrupación de huecos y exportación para impresión 3D.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16 flex-grow">
+
+    <!-- Section 1: Interfaz y Navegación -->
+    <section id="interfaz" class="space-y-6">
+      <div class="border-b border-slate-800 pb-3">
+        <h3 class="text-2xl font-bold text-sky-400 flex items-center gap-2">
+          <i class="fa-solid fa-[#cube] fa-cube"></i> 1. Interfaz y Controles de Cámara
+        </h3>
+        <p class="text-slate-400 text-sm mt-1">Cómo moverte en el espacio tridimensional con fluidez.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-5 hover:border-sky-500/50 transition">
+          <div class="w-10 h-10 bg-sky-500/10 text-sky-400 rounded-lg flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-[#mouse] fa-computer-mouse"></i>
+          </div>
+          <h4 class="font-semibold text-lg text-white mb-2">Rotar la Vista (Órbita)</h4>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Mantén presionado el <strong class="text-slate-200">clic derecho del ratón</strong> y arrastra en cualquier dirección para girar la cámara alrededor de tus objetos.
+          </p>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-5 hover:border-sky-500/50 transition">
+          <div class="w-10 h-10 bg-sky-500/10 text-sky-400 rounded-lg flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-[#arrows-up-down-left-right] fa-arrows-up-down-left-right"></i>
+          </div>
+          <h4 class="font-semibold text-lg text-white mb-2">Desplazar la Vista (Pan)</h4>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Mantén presionada la <strong class="text-slate-200">rueda del ratón (clic central)</strong> o presiona <code class="bg-slate-900 px-1.5 py-0.5 rounded text-sky-300">Shift + Clic Derecho</code> para trasladarte de lado a lado.
+          </p>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-5 hover:border-sky-500/50 transition">
+          <div class="w-10 h-10 bg-sky-500/10 text-sky-400 rounded-lg flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-[#magnifying-glass-plus] fa-magnifying-glass-plus"></i>
+          </div>
+          <h4 class="font-semibold text-lg text-white mb-2">Zoom y Enfoque</h4>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Gira la <strong class="text-slate-200">rueda del ratón</strong> para acercarte o alejarte. Selecciona un objeto y presiona la tecla <code class="bg-slate-900 px-1.5 py-0.5 rounded text-sky-300">F</code> para centrar la vista en él.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Operaciones Básicas -->
+    <section id="operaciones" class="space-y-6">
+      <div class="border-b border-slate-800 pb-3">
+        <h3 class="text-2xl font-bold text-sky-400 flex items-center gap-2">
+          <i class="fa-solid fa-[#shapes] fa-shapes"></i> 2. Conceptos Clave y Operaciones
+        </h3>
+        <p class="text-slate-400 text-sm mt-1">Los pilares del modelado sólido constructivo (CSG).</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Bloque Sólidos y Huecos -->
+        <div class="bg-slate-800/40 border border-slate-700/60 rounded-xl p-6 space-y-4">
+          <h4 class="text-lg font-bold text-white flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-emerald-400"></span> Sólidos vs. Huecos (Holes)
+          </h4>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            En Tinkercad cualquier forma puede actuar como cuerpo sólido o como perforador (Hueco). Para sustraer material:
+          </p>
+          <ol class="list-decimal list-inside text-sm text-slate-400 space-y-2">
+            <li>Arrastra una forma sólida (ej. un Cilindro).</li>
+            <li>En el panel inspector del objeto, cámbialo a modo <strong class="text-sky-300">Hueco</strong>.</li>
+            <li>Colócalo atravesando otra figura sólida.</li>
+            <li>Selecciona ambas formas y presiona <code class="bg-slate-900 px-2 py-0.5 rounded text-sky-300">Ctrl + G</code> (Agrupar).</li>
+          </ol>
+        </div>
+
+        <!-- Bloque Alineación y Espejo -->
+        <div class="bg-slate-800/40 border border-slate-700/60 rounded-xl p-6 space-y-4">
+          <h4 class="text-lg font-bold text-white flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-sky-400"></span> Alineación y Regla
+          </h4>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Mantén tus diseños precisos y centrados utilizando las herramientas avanzadas de posición:
+          </p>
+          <ul class="list-disc list-inside text-sm text-slate-400 space-y-2">
+            <li><strong class="text-slate-200">Alinear (L):</strong> Selecciona 2 o más objetos, presiona <code class="bg-slate-900 px-1.5 py-0.5 rounded text-sky-300">L</code> y haz clic en los puntos negros para centrar o alinear a bordes.</li>
+            <li><strong class="text-slate-200">Regla (R):</strong> Presiona <code class="bg-slate-900 px-1.5 py-0.5 rounded text-sky-300">R</code> y haz clic en la cuadrícula para ver cotas numéricas exactas en milímetros.</li>
+            <li><strong class="text-slate-200">Plano de Trabajo (W):</strong> Presiona <code class="bg-slate-900 px-1.5 py-0.5 rounded text-sky-300">W</code> y pulsa la cara de cualquier objeto para construir directamente sobre esa superficie.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Proyectos Guiados -->
+    <section id="proyectos" class="space-y-6">
+      <div class="border-b border-slate-800 pb-3">
+        <h3 class="text-2xl font-bold text-sky-400 flex items-center gap-2">
+          <i class="fa-solid fa-[#hammer] fa-hammer"></i> 3. Proyectos Prácticos Paso a Paso
+        </h3>
+        <p class="text-slate-400 text-sm mt-1">Aplica los conocimientos creando piezas funcionales.</p>
+      </div>
+
+      <!-- Tabs Navigation -->
+      <div class="flex border-b border-slate-800 gap-4 text-sm font-medium">
+        <button onclick="switchTab('taza')" id="tab-taza" class="pb-3 tab-active transition">
+          <i class="fa-solid fa-[#mug-hot] fa-mug-hot mr-2"></i>Proyecto 1: Taza con Asa
+        </button>
+        <button onclick="switchTab('llavero')" id="tab-llavero" class="pb-3 text-slate-400 hover:text-slate-200 transition">
+          <i class="fa-solid fa-[#key] fa-key mr-2"></i>Proyecto 2: Llavero Personalizado
+        </button>
+      </div>
+
+      <!-- Tab Content: Taza -->
+      <div id="content-taza" class="bg-slate-800/40 border border-slate-700/60 rounded-xl p-6">
+        <h4 class="text-xl font-bold text-white mb-4">Diseño de una Taza 3D</h4>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800">
+            <span class="text-xs font-bold text-sky-400 uppercase">Paso 1</span>
+            <h5 class="font-semibold text-white mt-1">Cuerpo Exterior</h5>
+            <p class="text-xs text-slate-400 mt-2">Arrastra un Cilindro sólido. Ajusta sus medidas a 50mm x 50mm de base y 60mm de altura.</p>
+          </div>
+          <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800">
+            <span class="text-xs font-bold text-sky-400 uppercase">Paso 2</span>
+            <h5 class="font-semibold text-white mt-1">Vaciado Interior</h5>
+            <p class="text-xs text-slate-400 mt-2">Duplica el cilindro (<code class="text-sky-300">Ctrl+D</code>), hazlo Hueco, redúcelo a 44x44mm y elévalo 3mm del suelo.</p>
+          </div>
+          <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800">
+            <span class="text-xs font-bold text-sky-400 uppercase">Paso 3</span>
+            <h5 class="font-semibold text-white mt-1">Crear el Asa</h5>
+            <p class="text-xs text-slate-400 mt-2">Arrastra una forma de Dona (Toroide), gérala 90° e insértala lateralmente en el cilindro exterior.</p>
+          </div>
+          <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800">
+            <span class="text-xs font-bold text-sky-400 uppercase">Paso 4</span>
+            <h5 class="font-semibold text-white mt-1">Agrupar Todo</h5>
+            <p class="text-xs text-slate-400 mt-2">Selecciona los tres elementos y pulsa <code class="text-sky-300">Ctrl+G</code>. ¡La taza quedará vaciada automáticamente!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab Content: Llavero -->
+      <div id="content-llavero" class="hidden bg-slate-800/40 border border-slate-700/60 rounded-xl p-6">
+        <h4 class="text-xl font-bold text-white mb-4">Diseño de un Llavero con Nombre</h4>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800">
+            <span class="text-xs font-bold text-sky-400 uppercase">Paso 1</span>
+            <h5 class="font-semibold text-white mt-1">Base Principal</h5>
+            <p class="text-xs text-slate-400 mt-2">Crea una Caja de 60mm de ancho, 25mm de largo y 3mm de alto. Redondea levemente los bordes con el inspector.</p>
+          </div>
+          <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800">
+            <span class="text-xs font-bold text-sky-400 uppercase">Paso 2</span>
+            <h5 class="font-semibold text-white mt-1">Agujero para Anilla</h5>
+            <p class="text-xs text-slate-400 mt-2">Coloca un Cilindro Hueco de 6x6mm cerca de un extremo lateral de la base para poder colgar las llaves.</p>
+          </div>
+          <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800">
+            <span class="text-xs font-bold text-sky-400 uppercase">Paso 3</span>
+            <h5 class="font-semibold text-white mt-1">Texto en Relieve</h5>
+            <p class="text-xs text-slate-400 mt-2">Arrastra el objeto Texto, escribe tu nombre, ajusta la altura a 5mm y ubícalo sobre la base.</p>
+          </div>
+          <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800">
+            <span class="text-xs font-bold text-sky-400 uppercase">Paso 4</span>
+            <h5 class="font-semibold text-white mt-1">Unión y Exportación</h5>
+            <p class="text-xs text-slate-400 mt-2">Agrupa todo (<code class="text-sky-300">Ctrl+G</code>) y haz clic en el botón <strong class="text-white">Exportar > .STL</strong> para mandarlo a tu impresora 3D.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Tabla de Atajos de Teclado -->
+    <section id="atajos" class="space-y-6">
+      <div class="border-b border-slate-800 pb-3 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div>
+          <h3 class="text-2xl font-bold text-sky-400 flex items-center gap-2">
+            <i class="fa-solid fa-[#keyboard] fa-keyboard"></i> 4. Tabla de Atajos Esenciales
+          </h3>
+          <p class="text-slate-400 text-sm mt-1">Acelera tu flujo de trabajo en el modelado 3D.</p>
+        </div>
+        <input type="text" id="shortcut-search" onkeyup="filterShortcuts()" placeholder="Buscar atajo..." class="bg-slate-800 border border-slate-700 text-sm text-slate-200 px-4 py-2 rounded-lg focus:outline-none focus:border-sky-500 w-full sm:w-64">
+      </div>
+
+      <div class="overflow-x-auto bg-slate-800/40 border border-slate-700/60 rounded-xl">
+        <table class="w-full text-left text-sm text-slate-300">
+          <thead class="bg-slate-800/80 text-sky-400 uppercase text-xs tracking-wider">
+            <tr>
+              <th class="px-6 py-3">Acción / Función</th>
+              <th class="px-6 py-3">Tecla / Combinación</th>
+              <th class="px-6 py-3">Descripción</th>
+            </tr>
+          </thead>
+          <tbody id="shortcut-table" class="divide-y divide-slate-800">
+            <tr class="hover:bg-slate-800/40 transition">
+              <td class="px-6 py-3 font-semibold text-white">Agrupar</td>
+              <td class="px-6 py-3"><code class="bg-slate-900 border border-slate-700 px-2 py-1 rounded text-sky-300">Ctrl + G</code></td>
+              <td class="px-6 py-3 text-slate-400">Combina formas seleccionadas o realiza cortado con huecos.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition">
+              <td class="px-6 py-3 font-semibold text-white">Desagrupar</td>
+              <td class="px-6 py-3"><code class="bg-slate-900 border border-slate-700 px-2 py-1 rounded text-sky-300">Ctrl + Shift + G</code></td>
+              <td class="px-6 py-3 text-slate-400">Separa formas previamente agrupadas en sus componentes originales.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition">
+              <td class="px-6 py-3 font-semibold text-white">Duplicar en el sitio</td>
+              <td class="px-6 py-3"><code class="bg-slate-900 border border-slate-700 px-2 py-1 rounded text-sky-300">Ctrl + D</code></td>
+              <td class="px-6 py-3 text-slate-400">Duplica el objeto memorizando transformaciones de repetición.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition">
+              <td class="px-6 py-3 font-semibold text-white">Alinear</td>
+              <td class="px-6 py-3"><code class="bg-slate-900 border border-slate-700 px-2 py-1 rounded text-sky-300">L</code></td>
+              <td class="px-6 py-3 text-slate-400">Muestra los nodos para alinear objetos en los ejes X, Y, Z.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition">
+              <td class="px-6 py-3 font-semibold text-white">Espejo / Simetría</td>
+              <td class="px-6 py-3"><code class="bg-slate-900 border border-slate-700 px-2 py-1 rounded text-sky-300">M</code></td>
+              <td class="px-6 py-3 text-slate-400">Invierte la orientación del objeto seleccionado como un espejo.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition">
+              <td class="px-6 py-3 font-semibold text-white">Cambiar Plano de Trabajo</td>
+              <td class="px-6 py-3"><code class="bg-slate-900 border border-slate-700 px-2 py-1 rounded text-sky-300">W</code></td>
+              <td class="px-6 py-3 text-slate-400">Permite colocar un plano auxiliar sobre cualquier cara inclinada.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition">
+              <td class="px-6 py-3 font-semibold text-white">Activar Regla</td>
+              <td class="px-6 py-3"><code class="bg-slate-900 border border-slate-700 px-2 py-1 rounded text-sky-300">R</code></td>
+              <td class="px-6 py-3 text-slate-400">Coloca una regla fija para medir distancias absolutas y relativas.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition">
+              <td class="px-6 py-3 font-semibold text-white">Alternar Sólido / Hueco</td>
+              <td class="px-6 py-3"><code class="bg-slate-900 border border-slate-700 px-2 py-1 rounded text-sky-300">S / H</code></td>
+              <td class="px-6 py-3 text-slate-400">Convierte el objeto rápido en Sólido (S) o en Hueco (H).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-800 border-t border-slate-700 py-6 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4">
+      <p>Manual interactivo listo para usar en Visual Studio Code • Diseñado para aprendizaje de Modelado 3D e Impresión 3D.</p>
+    </div>
+  </footer>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    // Tab switching functionality
+    function switchTab(tabName) {
+      const tabTaza = document.getElementById('tab-taza');
+      const tabLlavero = document.getElementById('tab-llavero');
+      const contentTaza = document.getElementById('content-taza');
+      const contentLlavero = document.getElementById('content-llavero');
+
+      if (tabName === 'taza') {
+        tabTaza.classList.add('tab-active');
+        tabTaza.classList.remove('text-slate-400');
+        tabLlavero.classList.remove('tab-active');
+        tabLlavero.classList.add('text-slate-400');
+        contentTaza.classList.remove('hidden');
+        contentLlavero.classList.add('hidden');
+      } else {
+        tabLlavero.classList.add('tab-active');
+        tabLlavero.classList.remove('text-slate-400');
+        tabTaza.classList.remove('tab-active');
+        tabTaza.classList.add('text-slate-400');
+        contentLlavero.classList.remove('hidden');
+        contentTaza.classList.add('hidden');
+      }
+    }
+
+    // Filter table rows based on search input
+    function filterShortcuts() {
+      const input = document.getElementById('shortcut-search');
+      const filter = input.value.toLowerCase();
+      const tbody = document.getElementById('shortcut-table');
+      const rows = tbody.getElementsByTagName('tr');
+
+      for (let i = 0; i < rows.length; i++) {
+        const textContent = rows[i].textContent || rows[i].innerText;
+        if (textContent.toLowerCase().indexOf(filter) > -1) {
+          rows[i].style.display = '';
+        } else {
+          rows[i].style.display = 'none';
+        }
+      }
+    }
+  </script>
+</body>
+</html>
